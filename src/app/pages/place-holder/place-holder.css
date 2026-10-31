@@ -1,0 +1,76 @@
+/* Scale the whole UI relative to the 1358px design width.
+   16px at 1358px → ~14.14px at 1200px → ~16.97px at 1440px */
+html {
+  font-size: clamp(14.14px, 1.1782vw, 16.97px);
+}
+
+div.plc {
+  background-image: url('/assests/images/header.png');
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh; /* avoids the mobile browser address-bar jump */
+  background-size: cover;
+  background-position: center top; /* keeps the crumpled-paper area visible on tall phone screens */
+  background-repeat: no-repeat;
+}
+
+.dot {
+  width: 0.46875rem; /* 7.5px */
+  height: 0.46875rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.059rem #0b111b33; /* 0.94px */
+}
+
+.coming-soon {
+  animation: btn-animate 2s ease-in-out infinite alternate;
+  transform: scale(1);
+}
+.action-btn {
+  transition: 0.3s all;
+}
+.action-btn .dot {
+  position: relative;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.action-btn .dot::after {
+  content: '\2192';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  color: #dffd00;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1;
+  opacity: 0;
+  transform: translate(-65%, -50%);
+  transition:
+    opacity 0.2s ease,
+    transform 0.25s ease;
+}
+.action-btn:hover .dot {
+  width: 0.9375rem; /* 15px */
+  height: 0.9375rem;
+  background-color: transparent;
+  box-shadow: none;
+}
+.action-btn:hover .dot::after {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes btn-animate {
+  from {
+    box-shadow: 0 0 0 0 rgba(252, 251, 251, 0.67);
+    -webkit-box-shadow: 0 0 0 0 rgba(252, 251, 251, 0.67);
+    -moz-box-shadow: 0 0 0 0 rgba(252, 251, 251, 0.67);
+    transform: scale(1);
+  }
+  to {
+    box-shadow: 0 0 0.625rem 0.625rem rgba(241, 241, 241, 0.452); /* 10px */
+    -webkit-box-shadow: 0 0 0.625rem 0.625rem rgba(241, 241, 241, 0.452);
+    -moz-box-shadow: 0 0 0.625rem 0.625rem rgba(241, 241, 241, 0.452);
+    transform: scale(1.05);
+  }
+}

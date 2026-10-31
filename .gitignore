@@ -16,6 +16,7 @@ yarn-error.log
 .project
 .classpath
 .c9/
+
 *.launch
 .settings/
 *.sublime-workspace
@@ -41,3 +42,4 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+/environments

@@ -1,0 +1,70 @@
+<div class="plc py-6 px-5 lg:py-8 lg:px-9">
+    <nav class="flex flex-col gap-6 pb-8 lg:flex-row lg:justify-between lg:gap-0">
+        <div>
+            <img src="/assests/images/logo.svg" alt="IMBILT_LOGO">
+        </div>
+
+        <!-- Full-width bar on mobile, compact badge on desktop -->
+        <div
+            class="coming-soon flex gap-2.5 py-[7.5px] px-[13.5px] w-full justify-center lg:justify-start lg:w-[161px] items-center bg-[#FCFCFB]">
+            <div class="dot bg-mint-500 shrink-0"></div>
+            <p class="text-wrap text-sm font-bold leading-3.5 max-lg:uppercase max-lg:tracking-wide max-lg:py-2">
+                New website <br class="hidden lg:block"> in progress
+            </p>
+        </div>
+    </nav>
+
+    <main class="flex flex-col gap-8 lg:flex-row lg:pe-4.5 lg:justify-between">
+        <div class="w-full lg:w-212.25">
+            <p class="uppercase font-semibold text-[10.31px] leading-[15px] tracking-[0.08em] lg:tracking-normal">
+                IMBILT — Digital Product Design &amp; Development Studio
+            </p>
+
+            <h1
+                class="font-black text-[12.5vw] leading-[0.95] sm:text-[4.5rem] lg:text-[93px] lg:leading-[89px] uppercase flex flex-col pt-3">
+                <span>Build what</span>
+                <span class="bg-mint-500 w-fit">matters.</span>
+            </h1>
+
+            <div class="text-[#1C1C1CCC]">
+                <p class="leading-7 pt-3.5 text-base lg:text-[16.88px]">
+                    IMBILT is a Digital Product Design &amp; Development Studio. We design
+                    <br class="hidden lg:block">and build clear, reliable digital products and systems for real business
+                    <br class="hidden lg:block">needs.
+                </p>
+
+                <div class="pt-4 lg:pt-[11.25px] w-full lg:w-135">
+                    <p class="text-wrap text-[14.06px] ps-3.75 border-s-2 border-mint-500">
+                        Our new website is currently in progress. In the meantime, we’re available to discuss your
+                        next product, system or digital challenge.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8">
+                <button type="button" (click)="projectModalOpen = true"
+                    class="h-12 bg-black border border-black text-white px-7 flex gap-2 items-center cursor-pointer hover:shadow hover:shadow-mauve-900 action-btn">
+                    Start a project
+                    <div class="dot bg-mint-500"></div>
+                </button>
+            </div>
+
+            <div
+                class="flex flex-col gap-2 lg:flex-row lg:justify-between w-full pt-9 text-[#1C1C1C80] text-xs uppercase font-semibold leading-[14px] tracking-[2.34px]">
+                <span>Think • Build • Impact</span>
+                <span>© 2026 IMBILT. All rights reserved.</span>
+            </div>
+        </div>
+
+        <div class="flex items-end">
+            <div class="bg-[#1C1C1C] text-white w-full lg:w-auto lg:h-[157.3125px] p-6 lg:p-9.25">
+                <span class="font-semibold text-[10px] uppercase tracking-[2.81px]">Contact IMBILT</span>
+                <p class="pt-[18.75px] text-[16px]">Direct contact details are being finalised.</p>
+
+            </div>
+        </div>
+    </main>
+</div>
+@if (projectModalOpen) {
+<app-start-project-modal (closed)="projectModalOpen = false"></app-start-project-modal>
+}
