@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StartProjectModal } from '../../shared/start-project-modal/start-project-modal';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-place-holder',
@@ -9,4 +10,5 @@ import { StartProjectModal } from '../../shared/start-project-modal/start-projec
 })
 export class PlaceHolder {
   projectModalOpen = false;
+  readonly contactPhone = environment.contactPhone;
 }

@@ -2,10 +2,19 @@
   <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-title"
     (click)="$event.stopPropagation()">
     <header class="modal-topline">
-      <span>START A PROJECT — {{ step }}/3</span>
+      <span>{{ sent ? 'ENQUIRY SENT' : 'START A PROJECT — ' + step + '/3' }}</span>
       <button type="button" class="close-button" (click)="close()" aria-label="Close dialog">CLOSE ×</button>
     </header>
 
+    @if (sent) {
+    <div class="success-screen" role="status" aria-labelledby="success-title">
+      <div class="success-mark" aria-hidden="true">✓</div>
+      <p class="success-eyebrow">MESSAGE RECEIVED</p>
+      <h2 id="success-title">THANK YOU, {{ name }}.</h2>
+      <p class="success-copy">Your project enquiry is on its way to our team. We’ll be in touch soon.</p>
+      <button type="button" class="send-button" (click)="close()">BACK TO SITE <span></span></button>
+    </div>
+    } @else {
     <div class="step-content" [class.slide-forward]="direction === 'forward'" [class.slide-back]="direction === 'back'"
       [attr.data-step]="step">
       @if (step === 1) {
@@ -31,12 +40,12 @@
         <input name="business" [(ngModel)]="business" placeholder="Business name" autocomplete="organization" />
         <input name="email" [(ngModel)]="email" placeholder="Email" type="email" autocomplete="email" required />
         <input name="phone" [(ngModel)]="phone" placeholder="Phone or WhatsApp" type="tel" autocomplete="tel" />
-        <button class="send-button" type="submit" [disabled]="sending || sent">{{ sending ? 'SENDING...' : sent ? 'SENT' : 'SUBMIT ENQUIRY' }}
+        <button class="send-button" type="submit" [disabled]="sending">{{ sending ? 'SENDING...' : 'SUBMIT ENQUIRY' }}
           <span></span></button>
-        @if (sent) { <p class="sent-note" role="status">Thanks — your enquiry has been submitted.</p> }
         @if (submitError) { <p class="sent-note" role="alert">{{ submitError }}</p> }
       </form>
       }
     </div>
+    }
   </section>
 </div>

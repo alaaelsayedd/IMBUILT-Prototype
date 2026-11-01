@@ -42,6 +42,34 @@
 .step-content.slide-back {
   animation-name: enter-back;
 }
+.success-screen {
+  min-height: 520px;
+  padding-top: 76px;
+  animation: enter 0.35s ease both;
+}
+.success-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 28px;
+  border-radius: 50%;
+  background: #dffd00;
+  font-size: 27px;
+  font-weight: 700;
+}
+.success-eyebrow {
+  margin: 0 0 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+.success-copy {
+  max-width: 390px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
 h2 {
   margin: 0 0 24px;
   font-size: clamp(28px, 6vw, 42px);
@@ -165,12 +193,17 @@ h2 {
   .step-content {
     padding-top: 30px;
   }
+  .success-screen {
+    min-height: 520px;
+    padding-top: 64px;
+  }
   .need-option {
     font-size: 12px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .step-content {
+  .step-content,
+  .success-screen {
     animation: none;
   }
 }

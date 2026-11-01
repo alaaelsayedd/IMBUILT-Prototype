@@ -23,7 +23,7 @@
             <h1
                 class="font-black text-[12.5vw] leading-[0.95] sm:text-[4.5rem] lg:text-[93px] lg:leading-[89px] uppercase flex flex-col pt-3">
                 <span>Build what</span>
-                <span class="bg-mint-500 w-fit">matters.</span>
+                <span class="bg-mint-500 w-fit highlight-draw">matters.</span>
             </h1>
 
             <div class="text-[#1C1C1CCC]">
@@ -43,7 +43,7 @@
 
             <div class="pt-8">
                 <button type="button" (click)="projectModalOpen = true"
-                    class="h-12 bg-black border border-black text-white px-7 flex gap-2 items-center cursor-pointer hover:shadow hover:shadow-mauve-900 action-btn">
+                    class="h-12 w-[220px] max-w-full bg-black border border-black text-white text-lg font-semibold px-7 flex justify-between gap-2 items-center cursor-pointer hover:shadow hover:shadow-mauve-900 action-btn ">
                     Start a project
                     <div class="dot bg-mint-500"></div>
                 </button>
@@ -57,9 +57,12 @@
         </div>
 
         <div class="flex items-end">
-            <div class="bg-[#1C1C1C] text-white w-full lg:w-auto lg:h-[157.3125px] p-6 lg:p-9.25">
+            <div class="bg-[#1C1C1C] text-white w-full lg:w-[400px] lg:h-[157.3125px] p-6 lg:p-9.25">
                 <span class="font-semibold text-[10px] uppercase tracking-[2.81px]">Contact IMBILT</span>
-                <p class="pt-[18.75px] text-[16px]">Direct contact details are being finalised.</p>
+                <div class="pt-[18.75px] text-[15px] space-y-2">
+                    <p>Email: <span>info@imbilt.online</span></p>
+                    <p>Phone: <span>{{ contactPhone }}</span></p>
+                </div>
 
             </div>
         </div>
