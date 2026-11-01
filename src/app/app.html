@@ -1,4 +1,9 @@
 <router-outlet></router-outlet>
+@if (loading()) {
+  <div class="loading-screen" [class.loading-screen--leaving]="leaving()" role="status" aria-label="Loading IMBILT">
+    <img class="loading-screen__logo" src="/assests/images/logo.svg" alt="IMBILT" />
+  </div>
+}
 <a
   class="whatsapp-float"
   [href]="whatsappUrl"

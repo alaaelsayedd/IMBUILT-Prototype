@@ -1,4 +1,4 @@
-<div class="plc py-6 px-5 lg:py-8 lg:px-9">
+<div class="plc flex flex-col py-6 px-5 lg:py-8 lg:px-9">
     <nav class="flex flex-col gap-6 pb-8 lg:flex-row lg:justify-between lg:gap-0">
         <div>
             <img src="/assests/images/logo.svg" alt="IMBILT_LOGO">
@@ -14,26 +14,27 @@
         </div>
     </nav>
 
-    <main class="flex flex-col gap-8 lg:flex-row lg:pe-4.5 lg:justify-between">
-        <div class="w-full lg:w-212.25">
-            <p class="uppercase font-semibold text-[10.31px] leading-[15px] tracking-[0.08em] lg:tracking-normal">
+    <main class="flex flex-1 flex-col gap-0 lg:flex-row lg:gap-8 py-10 lg:pt-0 lg:pe-4.5 lg:justify-between">
+        <div class="contents lg:block lg:w-212.25">
+            <p
+                class="mb-1 uppercase font-semibold text-[10.31px] leading-[15px] tracking-[0.08em] lg:mb-0 lg:tracking-normal">
                 IMBILT — Digital Product Design &amp; Development Studio
             </p>
 
             <h1
-                class="font-black text-[12.5vw] leading-[0.95] sm:text-[4.5rem] lg:text-[93px] lg:leading-[89px] uppercase flex flex-col pt-3">
+                class="font-black text-[12.5vw] leading-[64px] sm:text-[4.5rem] lg:text-[93px] lg:leading-[89px] uppercase flex flex-col pt-2 lg:pt-3">
                 <span>Build what</span>
                 <span class="bg-mint-500 w-fit highlight-draw">matters.</span>
             </h1>
 
             <div class="text-[#1C1C1CCC]">
-                <p class="leading-7 pt-3.5 text-base lg:text-[16.88px]">
+                <p class="leading-6 pt-3 text-base lg:leading-7 lg:pt-3.5 lg:text-[16.88px]">
                     IMBILT is a Digital Product Design &amp; Development Studio. We design
                     <br class="hidden lg:block">and build clear, reliable digital products and systems for real business
                     <br class="hidden lg:block">needs.
                 </p>
 
-                <div class="pt-4 lg:pt-[11.25px] w-full lg:w-135">
+                <div class="pt-3 lg:pt-[11.25px] w-full lg:w-135">
                     <p class="text-wrap text-[14.06px] ps-3.75 border-s-2 border-mint-500">
                         Our new website is currently in progress. In the meantime, we’re available to discuss your
                         next product, system or digital challenge.
@@ -41,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="pt-8">
+            <div class="pt-6 lg:pt-8">
                 <button type="button" (click)="projectModalOpen = true"
                     class="h-12 w-[220px] max-w-full bg-black border border-black text-white text-lg font-semibold px-7 flex justify-between gap-2 items-center cursor-pointer hover:shadow hover:shadow-mauve-900 action-btn ">
                     Start a project
@@ -50,13 +51,14 @@
             </div>
 
             <div
-                class="flex flex-col gap-2 lg:flex-row lg:justify-between w-full pt-9 text-[#1C1C1C80] text-xs uppercase font-semibold leading-[14px] tracking-[2.34px]">
+                class="hidden w-full pt-9 text-xs font-semibold uppercase leading-[14px] tracking-[2.34px] text-[#1C1C1C80] lg:flex lg:justify-between">
                 <span>Think • Build • Impact</span>
                 <span>© 2026 IMBILT. All rights reserved.</span>
             </div>
+
         </div>
 
-        <div class="flex items-end">
+        <div class="order-2 mt-7 flex items-end lg:order-none lg:mt-0">
             <div class="bg-[#1C1C1C] text-white w-full lg:w-[400px] lg:h-[157.3125px] p-6 lg:p-9.25">
                 <span class="font-semibold text-[10px] uppercase tracking-[2.81px]">Contact IMBILT</span>
                 <div class="pt-[18.75px] text-[15px] space-y-2">
@@ -65,6 +67,12 @@
                 </div>
 
             </div>
+        </div>
+
+        <div
+            class="order-3 mt-auto flex w-full flex-col gap-2 pt-5 text-xs font-semibold uppercase leading-[14px] tracking-[2.34px] text-[#1C1C1C80] lg:hidden">
+            <span>Think • Build • Impact</span>
+            <span>© 2026 IMBILT. All rights reserved.</span>
         </div>
     </main>
 </div>

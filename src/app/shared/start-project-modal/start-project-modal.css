@@ -187,15 +187,16 @@ h2 {
 }
 @media (max-width: 480px) {
   .project-modal {
-    min-height: calc(100dvh - 32px);
-    padding: 18px 17px 24px;
+    min-height: 0;
+    max-height: calc(100dvh - 32px);
+    padding: 18px 17px 20px;
   }
   .step-content {
-    padding-top: 30px;
+    padding-top: 24px;
   }
   .success-screen {
-    min-height: 520px;
-    padding-top: 64px;
+    min-height: 0;
+    padding-top: 40px;
   }
   .need-option {
     font-size: 12px;

@@ -10,7 +10,7 @@ div.plc {
   min-height: 100vh;
   min-height: 100dvh; /* avoids the mobile browser address-bar jump */
   background-size: cover;
-  background-position: center top; /* keeps the crumpled-paper area visible on tall phone screens */
+  background-position: 20% center; /* keeps the crumpled-paper area visible on tall phone screens */
   background-repeat: no-repeat;
 }
 
